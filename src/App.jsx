@@ -17,6 +17,7 @@ export default function App() {
       <NftCard path="/assets/man.glb" />
       <NftCard path="/assets/ship_bear.glb" />
       <NftCard path="/assets/1.glb" />
+      <NftCard path="/assets/huge.glb" />
     </Box>
   );
 }

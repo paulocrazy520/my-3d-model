@@ -3,7 +3,7 @@ import { Box, Button, IconButton, Typography } from "@mui/material";
 import DeleteForeverOutlinedIcon from "@mui/icons-material/DeleteForeverOutlined";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Nft3DModel from "./Nft3D";
+import Nft3DCanvas from "./Nft3DCanvas";
 
 const NftCard = ({ path }) => {
   return (
@@ -32,7 +32,7 @@ const NftCard = ({ path }) => {
             borderRadius: "3%",
           }}
         >
-          <Nft3DModel path = {path}/>
+          <Nft3DCanvas path = {path}/>
 
           <Box
             sx={{
@@ -45,7 +45,7 @@ const NftCard = ({ path }) => {
               justifyContent: "center",
             }}
           >
-            <Typography sx={{ fontSize: "16px", fontWeight:"500"}}>{path}</Typography>
+            <Typography sx={{ fontSize: "16px", fontWeight:"500"}}>{path.split("/")[path.split("/").length-1]}</Typography>
           </Box>
         </Box>
       </Box>
