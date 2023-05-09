@@ -49,8 +49,12 @@ export default function Nft3DModel({ path }) {
 
   return (
     <>
-      <ambientLight intensity={0.6} />
-      <pointLight position={[10, 10, 10]} />
+    <directionalLight color={0xffffff} intensity={1} position={[0, 30, 0]} />
+    <directionalLight color={0xffffff} intensity={1} position={[0, 0, 10]} />
+    <directionalLight color={0xffffff} intensity={1} position={[0, 0, -10]} />
+    <directionalLight color={0xffffff} intensity={1} position={[30, 0, 0]} />
+      {/* <ambientLight intensity={0.6} />
+      <pointLight position={[0, 10, 0]} /> */}
 
       <Suspense fallback={null}>
         <primitive object={scene} />
